@@ -1,0 +1,60 @@
+.bingo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .bingo-card {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cell {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .number-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+    .bingo-container {
+      padding: 0 10px;
+    }
+  
+    .bingo-card {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  
+    .cell {
+      padding: 5px;
+    }
+  
+    .number-cell {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .bingo-card {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+  
