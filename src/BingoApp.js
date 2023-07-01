@@ -1,17 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-
-const BingoApp = () => {
+const BingoApp2 = () => {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
 
-  const bingoNumbers = [
-    ['Keshni', 'Anand', 'cherry', 'date', 'elderberry'],
-  ['fig', 'grape', 'honeydew', 'kiwi', 'lemon'],
-  ['mango', 'nectarine', 'orange', 'pear', 'quince'],
-  ['raspberry', 'strawberry', 'tangerine', 'ugli', 'watermelon'],
-  ['xylophone', 'yam', 'zucchini', 'avocado', 'blueberry']
+  const generateRandomBingoNumbers = () => {
+    const shuffledWords = bingoWords.sort(() => Math.random() - 0.5);
+    const numberOfRows = 5;
+    const numberOfColumns = 5;
+    const randomizedBingoNumbers = [];
+    for (let i = 0; i < numberOfRows; i++) {
+      randomizedBingoNumbers.push(shuffledWords.slice(i * numberOfColumns, (i + 1) * numberOfColumns));
+    }
+    return randomizedBingoNumbers;
+  };
+
+  const bingoWords = [
+    'Keshni', 'Anand', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'kiwi', 'lemon', 'Word10',
+    'Word11', 'Word12', 'Word13', 'Word14', 'Word15', 'Word16', 'Word17', 'Word18', 'Word19', 'Word20',
+    'Word21', 'Word22', 'Word23', 'Word24', 'Word25', 'Word26', 'Word27', 'Word28', 'Word29', 'Word30',
+    'mango', 'nectarine', 'orange', 'pear', 'quince','raspberry', 'strawberry', 'tangerine', 'ugli', 'watermelon',
+    'xylophone', 'yam', 'zucchini', 'avocado', 'blueberry',
+    // Add more words here...
   ];
+
+  const [bingoNumbers, setBingoNumbers] = useState(generateRandomBingoNumbers());
 
   const handleClick = (number) => {
     if (selectedNumbers.includes(number)) {
@@ -94,18 +107,21 @@ const BingoApp = () => {
   };
 
   return (
-    <div className="bingo-card">
-      {bingoNumbers.map((row, rowIndex) => (
-        <div className="row" key={rowIndex}>
-          {row.map((number, columnIndex) => (
-            <div className="cell" key={columnIndex}>
-              {renderNumberCell(number)}
-            </div>
-          ))}
-        </div>
-      ))}
+    
+    <div className="bingo-container">
+      <div className="bingo-card">
+        {bingoNumbers.map((row, rowIndex) => (
+          <div className="row" key={rowIndex}>
+            {row.map((number, columnIndex) => (
+              <div className="cell" key={columnIndex}>
+                {renderNumberCell(number)}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default BingoApp;
+export default BingoApp2;
