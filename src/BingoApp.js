@@ -16,11 +16,8 @@ const BingoApp2 = () => {
   };
 
   const bingoWords = [
-    'Keshni', 'Anand', 'cherry', 'date', 'elderberry', 'fig', 'grape', 'honeydew', 'kiwi', 'lemon', 'Word10',
-    'Word11', 'Word12', 'Word13', 'Word14', 'Word15', 'Word16', 'Word17', 'Word18', 'Word19', 'Word20',
-    'Word21', 'Word22', 'Word23', 'Word24', 'Word25', 'Word26', 'Word27', 'Word28', 'Word29', 'Word30',
-    'mango', 'nectarine', 'orange', 'pear', 'quince','raspberry', 'strawberry', 'tangerine', 'ugli', 'watermelon',
-    'xylophone', 'yam', 'zucchini', 'avocado', 'blueberry',
+    'Keshni', 'Anand', 'Sindhur', 'Vows', 'Forever', 'Bhai', 'Bhen', 'Shanti', 'Fera', 'Children', 'Om Shanti',
+    'Chokha', 'Agni', 'Photo', 'Phera', 'Chandlo', 'Kanya',
     // Add more words here...
   ];
 
