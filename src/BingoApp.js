@@ -18,7 +18,7 @@ const BingoApp2 = () => {
   const bingoWords = [
     'Keshni', 'Anand', 'Sindoor', 'Forever', 'Bhai', 'Bhen', 'Om Shanti', 'Mangalsutra', 'Children', 'Swaha','Mangal','God','Ganesh','daan','Moksh','Hari Om',
     'Chokha', 'Havan', 'Fera', 'Chandlo', 'Kanya', 'Love', 'Blessings', 'Family','Celebrate','Bhavaḥ','Namaha','Bhakti', 'Payami','Ropam','Mandavo','bhagavan',
-    'Gantha','Ganthum',
+    'Gantha','Ganthum','Om',
     // Add more words here...
   ];
 
