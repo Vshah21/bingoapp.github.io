@@ -16,9 +16,9 @@ const BingoApp2 = () => {
   };
 
   const bingoWords = [
-    'Keshni', 'Anand', 'Sindoor', 'Forever', 'Bhai', 'Bhen', 'Om Shanti', 'Mangalsutra', 'Children', 'Swaha','Mangal','God','Ganesh','daan','Moksh','Hari Om',
-    'Chokha', 'Havan', 'Fera', 'Chandlo', 'Kanya', 'Love', 'Blessings', 'Family','Celebrate','Bhavaḥ','Namaha','Bhakti', 'Payami','Ropam','Mandavo','bhagavan',
-    'Gantha','Ganthum','Om',
+    'Keshni', 'Anand', 'Sindoor', 'Forever', 'Bhai', 'Bhen', 'Om Shanti', 'Mangalsutra', 'Children', 'Swaha','Mangal','Ganesh','daan','Moksh','Hari Om',
+    'Chokha', 'Havan', 'Fera', 'Chandlo', 'Kanya', 'Love', 'Ashirvad', 'Family','Celebrate','Bhavaḥ','Namaha','Bhakti','Payami','Ropam','Mandavo','Bhagavan',
+    'Gantha','Ganthum','Om','Shakti',
     // Add more words here...
   ];
 
