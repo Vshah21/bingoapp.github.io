@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const BingoApp2 = () => {
+const BingoApp = () => {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
 
   const generateRandomBingoNumbers = () => {
@@ -106,21 +106,23 @@ const BingoApp2 = () => {
   };
 
   return (
-    
-    <div className="bingo-container">
-      <div className="bingo-card">
-        {bingoNumbers.map((row, rowIndex) => (
-          <div className="row" key={rowIndex}>
-            {row.map((number, columnIndex) => (
-              <div className="cell" key={columnIndex}>
-                {renderNumberCell(number)}
-              </div>
-            ))}
-          </div>
-        ))}
+    <div>
+      <h1>Maharaj Bingo</h1>
+      <div className="bingo-container">
+        <div className="bingo-card">
+          {bingoNumbers.map((row, rowIndex) => (
+            <div className="row" key={rowIndex}>
+              {row.map((number, columnIndex) => (
+                <div className="cell" key={columnIndex}>
+                  {renderNumberCell(number)}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default BingoApp2;
+export default BingoApp;

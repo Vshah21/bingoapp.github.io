@@ -1,4 +1,9 @@
+
 .App {
+  text-align: center;
+}
+
+h1{
   text-align: center;
 }
 
@@ -16,7 +21,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
+  
 }
 
 .App-header {
@@ -48,6 +54,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  
 }
 
 .bingo-table {
@@ -91,15 +98,10 @@
   height: 100%;
   cursor: pointer;
   transition: background-color 0.3s;
+
 }
 
-.number-cell.selected {
-  background-color: red;
+.number-cell.selected, .number-cell:hover{
+  background-color: #ba181b;
   color:white;
-}
-
-.number-cell:hover{
-  background-color: red;
-  color:white;
-
 }
