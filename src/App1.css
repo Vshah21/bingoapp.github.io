@@ -1,0 +1,47 @@
+.bingo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  .bingo-card {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .cell {
+    flex: 1 0 20%;
+    background-color: #ffff;
+    border-radius: 5px;
+  }
+  
+  .number-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 500px) {
+    .cell {
+      flex: 1 0 33.33%;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .cell {
+      flex: 1 0 50%;
+    }
+  }
+  

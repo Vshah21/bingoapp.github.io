@@ -13,7 +13,7 @@ const BingoApp = () => {
   ];
 
   const generateRandomBingoNumbers = () => {
-    const shuffledWords = [...bingoWords].sort(() => Math.random() - 0.5);
+    const shuffledWords=[...bingoWords]; for(let i=shuffledWords.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [shuffledWords[i],shuffledWords[j]]=[shuffledWords[j],shuffledWords[i]];}
 
     const board = [];
     for (let i = 0; i < 5; i++) {
@@ -26,6 +26,7 @@ const BingoApp = () => {
   const [gameStarted, setGameStarted] = useState(false);
   const [selectedNumbers, setSelectedNumbers] = useState([]);
   const [bingoNumbers, setBingoNumbers] = useState([]);
+ const [hasWon,setHasWon]=useState(false);
 
   // Load saved game
   useEffect(() => {
@@ -50,7 +51,7 @@ const BingoApp = () => {
         setSelectedNumbers(savedSelections);
       }
 
-      setGameStarted(true);
+      setGameStarted(true); setHasWon(false);
     }
   }, []);
 
@@ -75,7 +76,7 @@ const BingoApp = () => {
   }, [selectedNumbers, playerName]);
 
   const createNewGame = () => {
-    const name = prompt("Enter your name");
+    const name = window.prompt("Enter your name");
 
     if (!name) return;
 
@@ -99,11 +100,9 @@ const BingoApp = () => {
 
   const handleClick = (word) => {
     if (selectedNumbers.includes(word)) {
-      setSelectedNumbers(
-        selectedNumbers.filter((item) => item !== word)
-      );
+      setSelectedNumbers(prev=>prev.filter(item=>item!==word));
     } else {
-      setSelectedNumbers([...selectedNumbers, word]);
+      setSelectedNumbers(prev=>[...prev,word]);
     }
   };
 
@@ -154,9 +153,7 @@ const BingoApp = () => {
   };
 
   useEffect(() => {
-    if (gameStarted && checkBingo()) {
-      alert("🎉 BINGO!");
-    }
+    if (gameStarted && !hasWon && checkBingo()) {setHasWon(true); alert("🎉 BINGO!");}
   }, [selectedNumbers]);
 
   const renderNumberCell = (word) => (
@@ -196,7 +193,7 @@ const BingoApp = () => {
         onClick={createNewGame}
       >
         New Game
-      </button>
+      </button><button className="new-game-button" onClick={()=>{localStorage.clear();window.location.reload();}}>Reset</button>
 
       <div className="bingo-card">
         {bingoNumbers.map((row, rowIndex) => (
