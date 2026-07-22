@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-const BingoApp2 = () => {
+const BingoApp = () => {
   const bingoWords = [
-    "Keshni", "Anand", "Sindoor", "Forever", "Bhai",
+    "Darshil", "Rajvi", "Sindoor", "Forever", "Bhai",
     "Bhen", "Om Shanti", "Mangalsutra", "Children", "Swaha",
     "Mangal", "Ganesh", "daan", "Moksh", "Hari Om",
     "Chokha", "Havan", "Fera", "Chandlo", "Kanya",
@@ -213,4 +213,4 @@ const BingoApp2 = () => {
   );
 };
 
-export default BingoApp2;
+export default BingoApp;
